@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:got_info/src/routing/app_router.dart';
 
-import 'features/authentication/home_page_test.dart';
-
 
 class GotInfoApp extends ConsumerWidget {
    GotInfoApp({super.key});
@@ -39,15 +37,16 @@ class GotInfoApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final goRouter = ref.watch(goRouterProvider);
-    return MaterialApp(
-        theme: ThemeData(
-          primaryColor: _primaryColor,
-          secondaryHeaderColor: _accentColor,
-          scaffoldBackgroundColor: Colors.grey.shade100,
-          primarySwatch: _createPrimarySwatch(_primaryColor),
-        ),
-        debugShowCheckedModeBanner: false,
-        home: HomePageTest()
+    return MaterialApp.router(
+      routerConfig: goRouter,
+      debugShowCheckedModeBanner: false,
+      restorationScopeId: 'got_info_app',
+      theme: ThemeData(
+        primaryColor: _primaryColor,
+        secondaryHeaderColor: _accentColor,
+        scaffoldBackgroundColor: Colors.grey.shade100,
+        primarySwatch: _createPrimarySwatch(_primaryColor),
+      ),
     );
   }
 }
