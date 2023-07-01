@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -50,7 +49,7 @@ class _LoginPageWidgetState extends ConsumerState<SignInPage> {
                   child: Column(
                     children: [
                       Image.asset(
-                        'images/logo_transparent.png',
+                        'assets/images/logo_transparent.png',
                         height: 200,
                         width: 200,
                       ),
