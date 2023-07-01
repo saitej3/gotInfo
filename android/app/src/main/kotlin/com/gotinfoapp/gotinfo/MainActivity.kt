@@ -1,4 +1,4 @@
-package com.example.got_info
+package com.gotinfoapp.gotinfo
 
 import io.flutter.embedding.android.FlutterActivity
 
